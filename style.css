@@ -15,7 +15,7 @@ body{
     font-family: 'Cairo', sans-serif;
 }
 .container{
-    inline-size: 50rem;
+    max-inline-size: 50rem;
     background-color: var(--half-white);
     margin-inline: auto;
     margin-block: 1rem;
@@ -35,6 +35,10 @@ body{
 .container__repos input:focus{
     outline: 2px solid var(--main-color);
 }
+.container__repos input::placeholder{
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.2rem;
+}
 .repos__getButton{
     inline-size:8.75rem ;
     margin-inline-start:.625rem;
@@ -49,4 +53,62 @@ body{
 .container__showData{
     padding: 1.25rem;
     background-color:var(--second-background-color) ;
+}
+.repo-box{
+    background-color: #fff;
+    padding: 0.9375rem;
+}
+.repo-box:not(:last-child){
+    margin-block-end: 0.3125rem;
+}
+.repo-box a,
+.repo-box span{
+    float: right;
+    margin-inline-end: 0.9375rem;
+    border-radius: 0.25rem;
+    color: #fff;
+    inline-size: 5.625rem;
+    text-align: center;
+    padding: 0.25rem;
+}
+.repo-box a{
+    text-decoration: none;
+    background-color: #E91E63;
+}
+.repo-box span{
+    background-color: #009688;
+}
+@media (width < 550px) {
+    .container{
+        inline-size: 100%;
+    }
+    .repo-box{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+}
+.lang{
+    background-color: var(--main-color);
+    block-size: 2.5rem;
+    inline-size: 4rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.3s all linear;
+}
+.lang:hover{
+    background-color: #0469dc;
+}
+.lang img{
+    width: 24px;
 }
