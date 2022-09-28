@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #0075ff;
+    --half-white: #f6f6f6;
+    --background-color: #EEE;
+    --second-background-color: #E0E0E0;
+
+}
+body{
+    font-family: 'Cairo', sans-serif;
+}
+.container{
+    inline-size: 50rem;
+    background-color: var(--half-white);
+    margin-inline: auto;
+    margin-block: 1rem;
+}
+.container__repos{
+    padding: 1.25rem;
+    display: flex;
+    background-color: var(--background-color);
+}
+.container__repos input{
+    inline-size: 100%;
+    padding:.94rem 1.25rem;
+    border: none;
+    font-size: 1.25rem;
+    block-size: 3.375rem;
+}
+.container__repos input:focus{
+    outline: 2px solid var(--main-color);
+}
+.repos__getButton{
+    inline-size:8.75rem ;
+    margin-inline-start:.625rem;
+    block-size: 3.375rem;
+    background-color: var(--main-color);
+    color: #fff;
+    line-height: 3.375rem;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+.container__showData{
+    padding: 1.25rem;
+    background-color:var(--second-background-color) ;
+}
